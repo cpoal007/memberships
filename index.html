@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YT MEMBERSHIPS: HOW TO BECOME A MEMBER VIA ANDROID OR iOS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+    }
+    header {
+      background-color: #cc0000;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.5em;
+      animation: fadeInDown 1s ease-out;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+      animation: fadeIn 1s ease-out 0.5s;
+      animation-fill-mode: both;
+    }
+    .tab {
+      background-color: #ddd;
+      border: none;
+      padding: 10px 20px;
+      margin: 0 5px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .tab:hover {
+      background-color: #bbb;
+    }
+    .tab.active {
+      background-color: #cc0000;
+      color: white;
+    }
+    .content {
+      display: none;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      border-radius: 8px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.5s ease;
+    }
+    .content.active {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .step {
+      margin-bottom: 20px;
+      animation: fadeIn 0.8s ease-out;
+    }
+    .step img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    YT MEMBERSHIPS: HOW TO BECOME A MEMBER VIA ANDROID OR iOS
+  </header>
+  <div class="tabs">
+    <button class="tab active" onclick="showSection('android')">Android</button>
+    <button class="tab" onclick="showSection('ios')">iOS</button>
+  </div>
+
+  <div id="android" class="content active">
+    <div class="step">
+      <strong>1. Open the YouTube App</strong>
+      <img src="https://via.placeholder.com/400x250?text=YouTube+App+Icon" alt="YouTube App Icon">
+    </div>
+    <div class="step">
+      <strong>2. Go to the channel you want to support</strong>
+      <img src="https://via.placeholder.com/400x250?text=Channel+Page+on+Android" alt="Channel Page Android">
+    </div>
+    <div class="step">
+      <strong>3. Tap the “Join” button</strong>
+      <img src="https://via.placeholder.com/400x250?text=Join+Button" alt="Join Button Android">
+    </div>
+    <div class="step">
+      <strong>4. View the membership tiers</strong>
+      <img src="https://via.placeholder.com/400x250?text=Membership+Options" alt="Membership Tiers Android">
+    </div>
+    <div class="step">
+      <strong>5. Select a plan and proceed with Google Play payment</strong>
+      <img src="https://via.placeholder.com/400x250?text=Google+Play+Payment" alt="Google Play Payment">
+    </div>
+  </div>
+
+  <div id="ios" class="content">
+    <div class="step">
+      <strong>1. Open Safari</strong>
+      <img src="https://via.placeholder.com/400x250?text=Safari+Icon" alt="Safari Icon">
+    </div>
+    <div class="step">
+      <strong>2. Go to youtube.com and sign in</strong>
+      <img src="https://via.placeholder.com/400x250?text=YouTube+Homepage" alt="YouTube Homepage">
+    </div>
+    <div class="step">
+      <strong>3. Navigate to the channel you want to support</strong>
+      <img src="https://via.placeholder.com/400x250?text=Channel+Page+on+iOS" alt="Channel Page iOS">
+    </div>
+    <div class="step">
+      <strong>4. Tap the “Join” button (next to Subscribe)</strong>
+      <img src="https://via.placeholder.com/400x250?text=Join+Button+Safari" alt="Join Button Safari">
+    </div>
+    <div class="step">
+      <strong>5. Choose a membership tier</strong>
+      <img src="https://via.placeholder.com/400x250?text=Membership+Tiers" alt="Membership Tiers iOS">
+    </div>
+    <div class="step">
+      <strong>6. Complete the payment via Apple Pay or card</strong>
+      <img src="https://via.placeholder.com/400x250?text=Apple+Pay+Checkout" alt="Apple Pay Checkout">
+    </div>
+    <p><em>*Note: YouTube app on iOS does not support memberships due to Apple policy. Use Safari instead.*</em></p>
+  </div>
+
+  <script>
+    function showSection(id) {
+      const tabs = document.querySelectorAll('.tab');
+      const contents = document.querySelectorAll('.content');
+
+      tabs.forEach(tab => tab.classList.remove('active'));
+      contents.forEach(section => section.classList.remove('active'));
+
+      document.querySelector(`.tab[onclick*="${id}"]`).classList.add('active');
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
